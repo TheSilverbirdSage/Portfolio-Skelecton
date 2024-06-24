@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF -8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="Style.css">
+    </head>
+    <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="MA (2).jpg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Designer</p>
+                <h1>I Am <span>Moses Ajagbe</span><br> From Nigeria</h1>
+            </div> 
+        </div>
+    </div>
+ <!-- -----------about----------- -->
+    <div id="about"> 
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="discover_the_world_in_virtual_reality_travel-wallpaper-3554x1999.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>From the very beginning, Berea College was founded to be accessible to people who otherwise could not afford a college education. As the first interracial and coeducational college in the South, Berea was open to all people in the region, regardless of race, gender or ability to pay. No Berea student has paid tuition since 1892.
+                         </p>
+
+                         <div class="tab-titles">
+                             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                             <p class="tab-links" onclick="opentab('expirience')">Expirience</p>
+                             <p class="tab-links" onclick="opentab('education')">Education</p>
+                         </div>
+                         <div class="tab-contents active-tab" id="skills">
+                             <ul>
+                                 <li><span>Web Design</span><br>Web App Design</li>
+                                 <li><span>Web Development</span><br>Web App Development</li>
+                                 <li><span>App Devlopment</span><br>Building Android/IOS Apps</li>
+                                 <li><span>Sound Engineering</span><br>Maintaing/Setting up Sound Equipment</li>
+                             </ul>
+                         </div>
+                         <div class="tab-contents" id="expirience">
+                            <ul>
+                                <li><span>2023 - Current</span><br>Web App Designer at N-Age Technologies</li>
+                                <li><span>2020 - Current</span><br>CEO at Rouge Institute</li>
+                                <li><span>2014 - Current</span><br>Sound Engineer at Rhema Baptist Church</li>
+                                <li><span>2019 - 2020</span><br>IT personel at Rouge Institute</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2020</span><br>Web Design Training </li>
+                                <li><span>2023</span><br>Web App Development Training</li>
+                                <li><span>2014</span><br>Sound Training at Rhema Baptist Church</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = documents.getElementsByClassName("tab-links");
+        var tabcontents = documents.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    </body>
+</html>
